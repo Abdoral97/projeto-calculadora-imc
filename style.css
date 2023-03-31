@@ -199,7 +199,7 @@ td {
     background-color: #293241;
     color: #E0FBFC;
     width: 734px;
-    height: 728px;
+    height: 708px;
     border-radius: 6px;
     box-shadow: 08px 08px 15px rgba(0, 0, 0, 0.233);
 
@@ -217,6 +217,7 @@ ul {
 #b-voltar-ajuda {
     display: block;
     margin: auto;
+    margin-bottom: 30px;
 }
 
 #b-voltar-ajuda:hover {

@@ -3,9 +3,13 @@
 @media screen and (max-width:768px) {
 
 
+    body{
+        background: #293241;
+    }
     #explicacao {
         height: 830px;
         width: 610px;
+        box-shadow: 0px 0px 0px 0px;
 
     }
 
