@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora IMC</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon"><!--LINK DO FAVICON-->
+    <link rel="stylesheet" href="style.css"><!--LINK DA CSS-->
+    <link rel="stylesheet" href="font-awesome/css/all.min.css"><!--LINK DOS ICONES-->
+
+</head>
+
+<body>
+    <!--SECTION ONDE FICA A CALCULADORA COM OS SEUS LINKS, BOTÕES E INPUST.-->
+    <section id="section">
+        <div id="calculadora">
+            <!--TITULO-->
+            <h1>Calculadora IMC <i class="fa-solid fa-calculator"></i></h1>
+            <!--FORMULÁRIO-->
+            <form id="form" onsubmit="return false">
+                <!--onsubmit="return false", FAZ COM QUE NADA SEJA ENVIADO E NENHUMA AÇÃO TOMADA.-->
+                <!--INPUT DA ALTURA-->
+                <div class="input">
+                    <label for="altura">Altura:</label>
+                    <input type="number" name="altura" id="altura" autofocus required placeholder="Exemplo 1,65"
+                        step='0.01'>
+                    <!--STEP FAZ COM QUE O VALOR SEJA CREMENTADO DE 0.01-->
+                    <!--AUTOFOCUS PARA INICIAR COM O INPUT SELECIONADO-->
+                    <!--REQUIRED PARA FAZER O CALCULO APÓS OS DADOS SEREM PREENCHIDOS-->
+                </div>
+                <!--INPUT DO PESO-->
+                <div class="input">
+                    <label for="peso">Peso:</label>
+                    <input type="number" name="peso" id="peso" required placeholder="Exemplo 65,7" step="0.01">
+                    <!--REQUIRED PARA FAZER O CALCULO APÓS OS DADOS SEREM PREENCHIDOS-->
+                </div>
+                <p id="resposta-erro"></p>
+                <!--BOTÕES DE CALCULAR E LIMPAR-->
+                <div id="botoes">
+                    <button type="reset" id="b-limpar">Limpar</button>
+                    <button id="b-calcular" type="menu">Calcular</button>
+                </div>
+            </form>
+            <!--LINK DE COMO FUNCIONA O CALCULO-->
+            <a href="como-funciona.html" rel="next">Como funciona?</a>
+        </div>
+
+
+        <!--RESULTADO APÓS O CALCULO-->
+        <div id="resultados">
+
+            <!--PARAGRAGOS COM OS DADOS DO CALCULO-->
+            <div id="dados-imc">
+                <p>Seu IMC é: <span id="seu-imc"></span></p>
+                <p><span id="imc-clacificacao"></span></p>
+            </div>
+
+            <!--TABELA COM AS CLASSIFICAÇÕES-->
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>IMC</th>
+                        <th>Classificação</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr id="magreza"><!--ID PARA IDENTIFICA A CLASSIFICAÇÃO QUANDO FOR MUDAR A COR DA FONTE NO JS-->
+                        <td>Abaixo de 18,5</td>
+                        <td>Magreza</td>
+                    </tr>
+                    <tr id="normal">
+                        <td>Entre 18,5 e 24,9</td>
+                        <td>Normal</td>
+                    </tr>
+                    <tr id="obesidade-i">
+                        <td>Entre 25,0 e 29,9</td>
+                        <td>Obesidade I</td>
+                    </tr>
+                    <tr id="obesidade-ii">
+                        <td>Entre 30,0 e 39,9</td>
+                        <td>Obesidade II</td>
+                    </tr>
+                    <tr id="obesidade-iii">
+                        <td>Maior que 40,0</td>
+                        <td>Obesidade III</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <!--BOTÃO PARA VOLTAR PARA A CALCULADORA-->
+            <button id="b-voltar">Voltar</button>
+        </div>
+    </section>
+    <script src="script.js"></script><!--ARQUIVO JS-->
+</body>
+
+</html>

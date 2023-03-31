@@ -1,0 +1,16 @@
+@charset "UTF-8";
+
+@media screen and (max-width:768px) {
+
+
+    #explicacao {
+        height: 830px;
+        width: 610px;
+
+    }
+
+    #b-voltar-ajuda {
+        margin-top: 45px;
+    }
+
+}
